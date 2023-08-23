@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <h3>Enter Numbers To Find larger</h3>
+    <p><input type="text" id="field1" placeholder="First Number" /></p>
+    <p><input type="text" id="field2" placeholder="Second Number" /></p>
+    <p><input type="text" id="field3" placeholder="Third number" /></p>
+    <p><input type="text" id="field4" placeholder="Fourth number" /></p>
+    <p><input type="text" id="field5" placeholder="Fifth Number" /></p>
+    <p>
+      <button onclick="factorial()" style="color: blueviolet">Click me</button>
+    </p>
+    <p><label id="display"></label></p>
+  </body>
+  <script>
+    var display = document.getElementById("display");
+
+    function factorial() {
+      var number1 = document.getElementById("field1").value;
+      var number2 = document.getElementById("field2").value;
+      var number3 = document.getElementById("field3").value;
+      var number4 = document.getElementById("field4").value;
+      var number5 = document.getElementById("field5").value;
+      var largerone = [number1, number2, number3, number4, number5];
+      var number = 0;
+      for (i = 0; i < 5; i++) {
+        if (number < largerone[i]) {
+          number = largerone[i];
+        }
+
+        display.innerText ="The larger Number is "+ number;
+        display.style.fontSize="18px";
+    
+      }
+    }
+  </script>
+</html>
