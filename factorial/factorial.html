@@ -1,0 +1,18 @@
+<html><body><h3>Enter Number To Find Factorial</h3>
+<p><input type="text" id="field" placeholder="Enter Here!!"></p>
+<p><button onclick="factorial()" style="color: blueviolet;">Click me</button></p>
+<p><label id="display"></label></p></body>
+<script>
+
+    function factorial(){
+        var number = document.getElementById('field').value;
+        var display = document.getElementById('display');
+        var sum = 1;
+        for(i=number;i>=1;i-- ){
+            sum = sum*i;
+            console.log(sum);
+            display.innerText = sum ;
+            display.style.color="green";
+        }
+    }
+</script></html>
